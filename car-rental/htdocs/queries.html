@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Car Rental project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/queries.js"></script>
+</head>
+
+
+
+<body>
+<header>
+    <script>createHeader(6);</script>
+</header>
+<div class="container">
+    <div class="leftHalf">
+        <fieldset>
+        <legend>QUERIES</legend>
+            <table>
+                <tr><td><button onclick="Query1();">Current Number of Employees in each store</button></td></tr>
+                <tr><td><button onclick="Query2();">Number of cars per store</button></td></tr>
+                <tr><td><button onclick="Query3();">The current managers </button></td></tr>
+                <tr><td><button onclick="Query4();">Customer Name and Vehicle reserved in Reserves after current date</td></tr>
+                <tr><td><button onclick="Query5();">Rents Completed in 2017</button></td></tr>
+            </table>
+        </fieldset>
+    </div>
+    <div class="rightHalf">
+        <fieldset>
+        <legend>QUERIES</legend>
+            <table>
+                <tr><td><button onclick="Query6();">Number of Rents per Customer</button></td></tr>
+                <tr><td><button onclick="Query7();">Number of Vehicles the company owns per type</button></td></tr>
+                <tr><td><button onclick="Query8();">Newest cars in each store</button></td></tr>
+                <tr><td><button onclick="Query9();">Newest vehicles in the company per type and in which store they are</button></td></tr>
+                <tr><td><button onclick="Query10();">Customers in each city</button></td></tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<footer id="footer">
+    <script>createFooter();</script>
+</footer>
+</body>
+</html>

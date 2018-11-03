@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Car Rental project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/customers.js"></script>
+</head>
+
+<body>
+<header>
+    <script>createHeader(3);</script>
+</header>
+<div class="container">
+    <div class="leftThird">
+        <fieldset>
+        <legend>ADD CUSTOMER</legend>
+            <table>
+            <tr><td>IRS Number:</td><td><input type="number" name="IRS_Number"/></td></tr>
+            <tr><td>SSN:</td><td><input type="number" name="SSN"/></td></tr>
+            <tr><td>Last Name:</td><td><input type="text" name="Last_Name"/></td></tr>
+            <tr><td>First Name:</td><td><input type="text" name="First_Name"/></td></tr>
+            <tr><td>Driving License No:</td><td><input type="number" name="Driver_License"/></td></tr>
+            <tr><td>First Registration:</td><td><input type="date" name="First_Registration"/></td></tr>
+            <tr><td>City:</td><td><input type="text" name="City"/></td></tr>
+            <tr><td>Postal Code:</td><td><input type="number" name="Postal_Code"/></td></tr>
+            <tr><td>Street:</td><td><input type="text" name="Street"/></td></tr>
+            <tr><td>Street Number:</td><td><input type="number" name="Street_Number"/></td></tr>
+            </table>
+            <button onclick="addCustomer();">Register</button>
+        </fieldset>
+    </div>
+    <div class="midThird">
+        <fieldset>
+        <legend>EDIT CUSTOMER</legend>
+            <table>
+                <tr><td>Customer ID:</td><td><input type="number" name="Customer_ID"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>City:</td><td><input type="text" name="City"/></td></tr>
+                <tr><td>Postal Code:</td><td><input type="number" name="Postal_Code"/></td></tr>
+                <tr><td>Street:</td><td><input type="text" name="Street"/></td></tr>
+                <tr><td>Street Number:</td><td><input type="number" name="Street_Number"/></td></tr>
+            </table>
+            <button onclick="updateCustomer();">Update</button>
+        </fieldset>
+        <fieldset>
+        <legend>DELETE CUSTOMER</legend>
+            <table>
+                <tr><td>Customer ID:</td><td><input type="number" name="Customer_ID"/></td></tr>
+            </table><br/>
+            <button onclick="deleteCustomer();">Delete</button>
+        </fieldset>
+    </div>
+    <div class="rightThird">
+        <fieldset>
+            <legend>VIEW</legend>
+            <table>
+                <tr><td><button onclick="viewAllCustomers();">All Customers</button></td><td></td></tr>
+                <tr><td><button onclick="searchCustomer();">Search Customer</button></td><td><input type="text" name="SearchCustomer"/></td></tr>
+                <tr><td><button onclick="viewCustomersActiveRentals();">Customers with active rentals</button></td><td></td></tr>
+                <tr><td><button onclick="viewCustomersNoReservations();">Customers with no reservation</button></td><td></td></tr>
+                <tr><td><button onclick="viewCustomersUnpaidFinishedReservations();">Customers with Unpaid finished reservations</button></td><td></td></tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<footer id="footer">
+    <script>createFooter();</script>
+</footer>
+</body>
+</html>

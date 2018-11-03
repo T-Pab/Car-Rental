@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Car Rental project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/book.js"></script>
+</head>
+
+<body>
+<header>
+    <script>createHeader(5);</script>
+</header>
+<div class="container">
+    <div class="leftThird">
+        <fieldset>
+        <legend>CHECK AVAILABILITY</legend>
+            <table>
+                <tr><td>Car type:</td><td><select name = "CType">
+    		            <option>Car</option>
+    		            <option>Motorcycle</option>
+    		            <option>ATV</option>
+    		            <option>Mini Vans</option>
+    		            <option>Trucks</option>
+                	</select></td></tr>
+                <tr><td>Start Date:</td><td><input type="date" name="Start_Date"/></td></tr>
+                <tr><td>Finish Date:</td><td><input type="date" name="Finish_Date"/></td></tr>
+                <tr><td><button onclick="available();">Check Availability</button></td></tr>
+            </table>
+        </fieldset>
+        <fieldset>
+        <legend>MAKE RESERVATION</legend>
+            <table>
+                <tr><td>License Plate:</td><td><input type="text" name="License_Plate"/></td></tr>
+                <tr><td>Start Date:</td><td><input type="date" name="Start_Date"/></td></tr>
+                <tr><td>Start Location:</td><td><input type="text" name="Start_Location"/></td></tr>
+                <tr><td>Finish Location:</td><td><input type="text" name="Finish_Location"/></td></tr>
+                <tr><td>Finish Date:</td><td><input type="date" name="Finish_Date"/></td></tr>
+                <tr><td>Customer ID:</td><td><input type="number" name="License_Plate"/></td></tr>
+                <tr><td><button onclick="makeReservation();">Reserve</button></td></tr>
+            </table>
+        </fieldset>
+        <fieldset>
+        <legend>CHANGE RESERVATION</legend>
+            <table>
+                <tr><td>License Plate:</td><td><input type="text" name="License_Plate"/></td></tr>
+                <tr><td>Start Date:</td><td><input type="date" name="Start_Date"/></td></tr>
+            </table><br>
+            <table>
+                <tr><td>Start Location:</td><td><input type="text" name="Start_Location"/></td></tr>
+                <tr><td>Finish Location:</td><td><input type="text" name="Finish_Location"/></td></tr>
+                <tr><td>Finish Date:</td><td><input type="date" name="Finish_Date"/></td></tr>
+                <tr><td>Customer ID:</td><td><input type="number" name="License_Plate"/></td></tr>
+                <tr><td><button onclick="changeReservation();">Change</button></td></tr>
+            </table>
+        </fieldset>
+    </div>
+    <div class="midThird">
+        <fieldset>
+        <legend>PAY EXISTING RESERVATION (MAKE A RENTAL)</legend>
+            <table>
+                <tr><td>License Plate:</td><td><input type="text" name="License_Plate"/></td></tr>
+                <tr><td>Start Date:</td><td><input type="date" name="Start_Date"/></td></tr>
+            <table/><br/>
+            <table>
+                <tr><td>Payment Amount:</td><td><input type="number" name="Payment_Amount"/></td></tr>
+                <tr><td>Payment Method:</td><td><input type="text" name="Payment_Method"/></td></tr>
+                <tr><td>Employee IRS Number:</td><td><input type="number" name="IRS_Number"/></td></tr>
+                <tr><td><button onclick="payReservation();">Pay</button></td></tr>
+            </table>
+        </fieldset>
+        <fieldset>
+        <legend>RETURN VEHICLE</legend>
+            <table>
+                <tr><td>License Plate:</td><td><input type="text" name="License_Plate"/></td></tr>
+                <tr><td>Start Date:</td><td><input type="date" name="Start_Date"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>Return State:</td><td><input type="number" name="Return_State"/></td></tr>
+                <tr><td><button onclick="returnVehicle();">Return</button></td></tr>
+            </table>
+        </fieldset>
+    </div>
+    <div class="rightThird">
+        <fieldset>
+        <legend> VIEW Reservations and Rents' info</legend>
+            <table>
+                <tr><td><button onclick="viewAllReservations();">All Reservations</button></td><td></td></tr>
+                <tr><td><button onclick="viewPastReservations();">Past Reservations</button></td><td></td></tr>
+                <tr><td><button onclick="viewUnpaidPastReservations();">Unpaid Past Reservations</button></td><td></td></tr>
+                <tr><td><button onclick="viewUnpaidFutureReservations();">Unpaid Future Reservations</button></td><td></td></tr>
+                <tr><td><button onclick="viewFutureReservations();">Future Reservations</button></td><td></td></tr>
+                <tr><td><button onclick="viewAllRentals();">All Rentals</button></td><td></td></tr>
+                <tr><td><button onclick="viewActiveRentals();">Active Rentals</button></td><td></td></tr>
+                <tr><td><button onclick="viewFutureRentals();">Future Rentals</button></td><td></td></tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<footer id="footer">
+    <script>createFooter();</script>
+</footer>
+</body>
+</html>

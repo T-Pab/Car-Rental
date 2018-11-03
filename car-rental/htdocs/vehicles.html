@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Car Rental project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/vehicles.js"></script>
+</head>
+
+<body>
+<header>
+    <script>createHeader(4);</script>
+</header>
+<div class="container">
+    <div class="leftThird">
+        <fieldset>
+        <legend>ADD VEHICLE</legend>
+        <table>
+            <tr><td>License Plate:</td><td><input type="text" name="License_Plate"/></td></tr>
+            <tr><td>Model:</td><td><input type="text" name="Model"/></td></tr>
+            <tr><td>Car type:</td><td><select name = "CType">
+		            <option>Car</option>
+		            <option>Motorcycle</option>
+		            <option>ATV</option>
+		            <option>Mini Vans</option>
+		            <option>Trucks</option>
+            	</select></td></tr>
+            <tr><td>Make:</td><td><input type="text" name="Make"/></td></tr>
+            <tr><td>Year:</td><td><input type="number" name="CYear"/></td></tr>
+            <tr><td>Kilometers:</td><td><input type="number" name="Kilometers"/></td></tr>
+            <tr><td>Cylinder Capacity:</td><td><input type="number" name="Cylinder_Capacity"/></td></tr>
+            <tr><td>Horse Power:</td><td><input type="number" name="Horse_Power"/></td></tr>
+            <tr><td>Damages:</td><td><input type="text" name="Damages"/></td></tr>
+            <tr><td>Malfunctions:</td><td><input type="text" name="Malfunctions"/></td></tr>
+            <tr><td>Next Service:</td><td><input type="date" name="Next_Service"/></td></tr>
+            <tr><td>Insurance Exp Date:</td><td><input type="date" name="Insurance_Exp_Date"/></td></tr>
+            <tr><td>Last Service:</td><td><input type="date" name="Last_Service"/></td></tr>
+            <tr><td>Store ID :</td><td><input type="number" name="Store_ID"/></td></tr>
+            <tr><td>Fuel:</td><td><input type="text" name="Fuel"/></td></tr>
+        </table>
+        <button onclick="addVehicle();">Register</button>
+        </fieldset>
+    </div>
+    <div class="midThird">
+        <fieldset>
+        <legend>EDIT VEHICLE</legend>
+        	<table>
+                <tr><td>License Plate:</td><td><input type="text" name="License_Plate"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>Kilometers:</td><td><input type="number" name="Kilometers"/></td></tr>
+                <tr><td>Damages:</td><td><input type="text" name="Damages"/></td></tr>
+                <tr><td>Malfunctions:</td><td><input type="text" name="Malfunctions"/></td></tr>
+                <tr><td>Next Service:</td><td><input type="date" name="Next_Service"/></td></tr>
+                <tr><td>Insurance Exp Date:</td><td><input type="date" name="Insurance_Exp_Date"/></td></tr>
+                <tr><td>Last Service:</td><td><input type="date" name="Last_Service"/></td></tr>
+                <tr><td>Store ID :</td><td><input type="number" name="Store_ID"/></td></tr>
+                <tr><td>Fuel:</td><td><input type="text" name="Fuel"/></td></tr>
+            </table>
+            <button onclick="updateVehicle();">Register</button>
+        </fieldset>
+    </div>
+    <div class="rightThird">
+        <fieldset>
+        <legend> VIEW VEHICLES INFORMATION</legend>
+            <table>
+                <tr><td><button onclick="viewAllVehicles();">All Vehicles</button></td></tr>
+                <tr><td><button onclick="searchVehicleModel();">Search Model:</button></td><td><input type="text" name="search"/></td></tr>
+                <tr><td><button onclick="searchVehicleMake();">Search Make:</button></td><td><input type="text" name="search"/></td></tr>
+                <tr><td><button onclick="searchVehicleLicensePlate();">Search License Plate:</button></td><td><input type="text" name="search"/></td></tr>
+                <tr><td><button onclick="viewVehiclesByType();">Vehicles of Type:</button></td><td><select name="CType">
+                        <option>Car</option>
+                        <option>Motorcycle</option>
+                        <option>ATV</option>
+                        <option>MiniVan</option>
+                        <option>Truck</option>
+                    </select></td></tr>
+                <tr><td><button onclick="viewDamagedVehicles();"> Vehicles with Damage</button></td></tr>
+                <tr><td><button onclick="viewMalfunctionsVehicles();">Vehicles with Malfunctions</button></td></tr>
+                <tr><td><button onclick="viewExpiredInsuranceVehicles();">Vehicles with Expired Insurance</button></td></tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<footer id="footer">
+    <script>createFooter();</script>
+</footer>
+</body>
+</html>

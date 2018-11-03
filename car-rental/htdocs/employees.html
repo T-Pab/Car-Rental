@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Car Rental project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/employees.js"></script>
+</head>
+
+<body>
+<header>
+    <script>createHeader(2);</script>
+</header>
+<div class="container">
+    <div class="leftThird">
+        <fieldset>
+        <legend>ADD EMPLOYEE</legend>
+            <table>
+                <tr><td>IRS Number:</td><td><input type="number" name="IRS_Number"/></td></tr>
+                <tr><td>Social Security Number:</td><td><input type="number" name="SSN"/></td></tr>
+                <tr><td>Driver License:</td><td><input type="number" name="Driver_License"/></td></tr>
+                <tr><td>First Name:</td><td><input type="text" name="First_Name"/></td></tr>
+                <tr><td>Last Name:</td><td><input type="text" name="Last_Name"/></td></tr>
+                <tr><td>Street:</td><td><input type="text" name="Street"/></td></tr>
+                <tr><td>Street Number:</td><td><input type="number" name="Street_Number"/></td></tr>
+                <tr><td>Postal Code:</td><td><input type="number" name="Postal_Code"/></td></tr>
+                <tr><td>City:</td><td><input type="text" name="City"/></td></tr>
+                <tr><td>Works Store ID:</td><td><input type="number" name="Store_ID"/></td></tr>
+                 <tr><td>Works Start Date:</td><td><input type="date" name="Start_Date"/></td></tr>
+                 <tr><td>Works Finish Date:</td><td><input type="date" name="Finish_Date"/></td></tr>
+                 <tr><td>Job:</td><td><input type="text" name="Job"/></td></tr>
+            </table>
+        <button onclick="addEmployee();">Register</button>
+        </fieldset>
+        <fieldset>
+            <legend>DELETE EMPLOYEE</legend>
+            <table>
+                <tr><td><button onclick="deleteEmployee();">With IRS NUMBER:</button></td><td><input type="number" name="IRS_Number"/></td></tr>
+            </table>
+        </fieldset>
+    </div>
+    <div class="midThird">
+        <fieldset>
+            <legend>UPDATE EMPLOYEE INFO</legend>
+            <table>
+                <tr><td>IRS NUMBER:</td><td><input type="number" name="IrsNumber"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>Driver License:</td><td><input type="number" name="DriverLicense"/></td></tr>
+                <tr><td>Street:</td><td><input type="text" name="Street"/></td></tr>
+                <tr><td>Street Number:</td><td><input type="number" name="StreetNumber"/></td></tr>
+                <tr><td>Postal Code:</td><td><input type="number" name="PostalCode"/></td></tr>
+                <tr><td>City:</td><td><input type="text" name="City"/></td></tr>
+            </table>
+            <button onclick="updateEmployeeInfo();">Update</button>
+        </fieldset>
+        <fieldset>
+            <legend>UPDATE EMPLOYEE'S WORK FINISH DAY</legend>
+            <table>
+                <tr><td>EMPLOYEE'S IRS:</td><td><input type="number" name="IrsNumber"/></td></tr>
+                <tr><td>Works Store ID:</td><td><input type="number" name="WorksStoreID"/></td></tr>
+                <tr><td>Works Start Date:</td><td><input type="date" name="WorksStartDate"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>Works Finish Date:</td><td><input type="date" name="WorksFinishDate"/></td></tr>
+            </table>
+            <button onclick="updateEmployeeWork();">Update</button>
+        </fieldset>
+        <fieldset>
+            <legend>ADD WORK INFO AT EMPLOYEE</legend>
+            <table>
+                <tr><td> EMPLOYEE'S IRS:</td><td><input type="number" name="IrsNumber"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>Works Store ID:</td><td><input type="number" name="WorksStoreID"/></td></tr>
+                <tr><td>Works Start Date:</td><td><input type="date" name="WorksStartDate"/></td></tr>
+                <tr><td>Works Finish Date:</td><td><input type="date" name="WorksFinishDate"/></td></tr>
+                <tr><td>Works Position:</td><td><input type="text" name="WorksPosition"/></td></tr>
+            </table>
+            <button onclick="addEmployeeWork();">Add</button>
+        </fieldset>
+    </div>
+    <div class="rightThird">
+        <fieldset>
+        <legend>VIEW EMPLOYEES INFORMATION</legend>
+            <table>
+                <tr><td><button onclick="viewAllEmployees();">All Employees</button></td></tr>
+                <tr><td><button onclick="viewActiveEmployees();">Active Employees and current Job</button></td></tr>
+                <tr><td><button onclick="viewPastEmployees();">Past Employees</button></td></tr>
+                <tr><td><button onclick="viewJobsOfEmployee();">Jobs of Employee's IRS:</button></td><td><input type="number" name="ID"/></td></tr>
+                <tr><td><button onclick="searchEmployee();">Search Employee:</button></td><td><input type="text" name="SearchEmployee"/></td></tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<footer id="footer">
+    <script>createFooter();</script>
+</footer>
+</body>
+</html>

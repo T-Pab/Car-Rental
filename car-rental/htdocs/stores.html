@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Car Rental project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/stores.js"></script>
+</head>
+
+<body>
+<header>
+    <script>createHeader(1);</script>
+</header>
+<div class="container">
+    <div class="leftThird">
+        <fieldset>
+        <legend>ADD STORE</legend>
+            <table>
+                <tr><td>Street:</td><td><input type="text" name="Street"/></td></tr>
+                <tr><td>Street Number:</td><td><input type="number" name="StreetNumber"/></td></tr>
+                <tr><td>Postal Code:</td><td><input type="number" name="PostalCode"/></td></tr>
+                <tr><td>City:</td><td><input type="text" name="City"/></td></tr>
+            </table>
+            <button onclick="addStore();">Register</button>
+        </fieldset>
+        <fieldset>
+        <legend>ADD PHONE NUMBER</legend>
+            <table>
+                <tr><td>Store ID:</td><td><input type="number" name="StoreID"/></td></tr>
+                <tr><td>Phone Number:</td><td><input type="number" name="PhoneNumber"/></td></tr>
+            </table>
+            <button onclick="addStorePhone();">Register</button>
+        </fieldset>
+        <fieldset>
+        <legend>ADD EMAIL ADDRESS</legend>
+            <table>
+                <tr><td>Store ID:</td><td><input type="number" name="StoreID"/></td></tr>
+                <tr><td>Email Address:</td><td><input type="text" name="EmailAddress"/></td></tr>
+            </table>
+            <button onclick="addStoreEmail();">Register</button>
+        </fieldset>
+    </div>
+    <div class="midThird">
+        <fieldset>
+        <legend>EDIT STORE</legend>
+            <table>
+                <tr><td>STORE ID:</td><td><input type="number" name="ID"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>Street:</td><td><input type="text" name="Street"/></td></tr>
+                <tr><td>Street Number:</td><td><input type="number" name="StreetNumber"/></td></tr>
+                <tr><td>Postal Code:</td><td><input type="number" name="PostalCode"/></td></tr>
+                <tr><td>City:</td><td><input type="text" name="City"/></td></tr>
+                <tr><td><button onclick="updateStore();">Update</button></td><td><button onclick="deleteStore();">Delete</button></td></tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>EDIT STORE'S PHONE NUMBER</legend>
+            <table>
+                <tr><td>STORE's ID:</td><td><input type="number" name="StoreID"/></td></tr>
+                <tr><td>Phone Number:</td><td><input type="number" name="PhoneNumber"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>New Phone Number:</td><td><input type="number" name="NewPhoneNumber"/></td></tr>
+                <tr><td><button onclick="updateStorePhone();">Update</button></td><td><button onclick="deleteStorePhone();">Delete</button></td></tr>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>EDIT STORE'S EMAIL ADDRESS</legend>
+             <table>
+                <tr><td>STORE's ID:</td><td><input type="number" name="StoreID"/></td></tr>
+                <tr><td>Email Address:</td><td><input type="text" name="EmailAddress"/></td></tr>
+            </table><br/>
+            <table>
+                <tr><td>New Email Address:</td><td><input type="text" name="NewEmailAddress"/></td></tr>
+                <tr><td><button onclick="updateStoreEmail();">Update</button></td><td><button onclick="deleteStoreEmail();">Delete</button></td></tr>
+            </table>
+        </fieldset>
+    </div>
+    <div class="rightThird">
+        <fieldset>
+        <legend>VIEW STORES INFORMATION</legend>
+            <table>
+                <tr><td><button onclick="viewAllStores();">All Stores</button></td></tr>
+                <tr><td><button onclick="viewStoreByID();">Store by ID:</button></td><td><input type="number" name="ID"/></td></tr>
+                <tr><td><button onclick="viewPhonesOfStore();">Phones of Store's ID:</button></td><td><input type="number" name="ID"/></td></tr>
+                <tr><td><button onclick="viewEmailsOfStore();">Emails: of Store's ID:</button></td><td><input type="number" name="ID"/></td></tr>
+                <tr><td><button onclick="viewEmployeesOfStore();">Employees of Store's ID:</button></td><td><input type="number" name="ID"/></td></tr>
+                <tr><td><button onclick="viewVehiclesOfStore();">Vehicles of Store's ID:</button></td><td><input type="number" name="ID"/></td></tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+<footer id="footer">
+    <script>createFooter();</script>
+</footer>
+</body>
+</html>
